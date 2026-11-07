@@ -28,4 +28,4 @@ I moved a shipping-cost model from single-node LightGBM to distributed training 
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/salif-sanogo-922593253) · sanogosalifpro@gmail.com
+[LinkedIn](https://www.linkedin.com/in/salif-sanogo-922593253)
