@@ -14,7 +14,7 @@ Python · Ray · Kubernetes · KubeRay · Helm · Optuna
 
 Seven Go projects from my distributed systems class, each one building on the last. It starts with MapReduce over RPC and ends with a five-node Raft-style cluster that elects a leader and repairs follower logs. In between there's a sharded, replicated search engine.
 
-Go · gRPC · Docker Compose · SQLite
+Go · net/rpc · Docker Compose · SQLite
 
 ### [llm-agent-injection-benchmark](https://github.com/Lifsaa/llm-agent-injection-benchmark)
 
