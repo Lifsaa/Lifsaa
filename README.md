@@ -1,28 +1,30 @@
-# Salif Sanogo
+# Hey, I'm Salif
 
-I build distributed systems and ML infrastructure. CS at Cal Poly SLO (graduating December 2026), previously a software engineering intern at Amazon.
+CS student at Cal Poly SLO, graduating December 2026. I'm into distributed systems and ML infra: getting training jobs to run across a lot of machines, and figuring out where adding more machines stops paying off. I worked on exactly that as an SDE intern at Amazon last summer.
 
-## Featured work
+## Projects
 
-**[distributed-rl-scaling](https://github.com/Lifsaa/distributed-rl-scaling)**
-PPO on Ray RLlib, run on a KubeRay cluster with 1 to 16 workers, to find where adding workers stops helping. Training time flattens past 8 workers because the centralized learner and cluster communication take over. Tuned hyperparameters nearly doubled best reward at 16 workers (99.5 to 198.3).
-`Python` `Ray` `Kubernetes` `KubeRay` `Helm` `Optuna`
+### [distributed-rl-scaling](https://github.com/Lifsaa/distributed-rl-scaling)
 
-**[distributed-systems](https://github.com/Lifsaa/distributed-systems)**
-Seven Go systems built in sequence: MapReduce over RPC, then across Docker containers, a sharded and replicated search engine, replicated banking with a fixed leader, and finally a five-node Raft-style cluster with leader election and log repair.
-`Go` `gRPC` `Docker Compose` `SQLite` `Raft`
+I trained a PPO agent with Ray RLlib on a Kubernetes cluster (KubeRay), using 1 to 16 workers, to see how much faster it actually gets. Past 8 workers it barely improved, because the central learner and network traffic become the bottleneck. Tuning hyperparameters took best reward at 16 workers from 99.5 to 198.3.
 
-**[llm-agent-injection-benchmark](https://github.com/Lifsaa/llm-agent-injection-benchmark)**
-A red-team benchmark for indirect prompt injection against a GPT-4o email agent with tools. Across 400 runs, combining Spotlighting and MELON-Aug cut attack success from 20% to 7%, at roughly twice the token cost.
-`Python` `OpenAI tool calling` `pytest`
+Python · Ray · Kubernetes · KubeRay · Helm · Optuna
 
-## Experience
+### [distributed-systems](https://github.com/Lifsaa/distributed-systems)
 
-**Amazon**, Software Development Engineer Intern (summer 2025). Moved a shipping-cost model from single-node LightGBM to distributed training on Ray, cutting training from 9 hours to under 2. Built AWS CDK infrastructure and CI/CD for ML training on SageMaker, and replaced Spark preprocessing with Polars.
+Seven Go projects from my distributed systems class, each one building on the last. It starts with MapReduce over RPC and ends with a five-node Raft-style cluster that elects a leader and repairs follower logs. In between there's a sharded, replicated search engine.
 
-## Tools I use most
+Go · gRPC · Docker Compose · SQLite
 
-Python, Go, C · Ray, Kubernetes, gRPC, Docker · AWS (SageMaker, CDK, EKS)
+### [llm-agent-injection-benchmark](https://github.com/Lifsaa/llm-agent-injection-benchmark)
+
+Can a malicious email trick a GPT-4o email agent into sending, deleting, or forwarding mail? Over 400 runs with no defense, 20% of attacks worked. Stacking Spotlighting and MELON-Aug brought that down to 7%, at about twice the token cost.
+
+Python · OpenAI tool calling · pytest
+
+## Amazon, SDE intern (summer 2025)
+
+I moved a shipping-cost model from single-node LightGBM to distributed training on Ray, which cut training time from 9 hours to under 2. I also set up the AWS CDK infrastructure and CI/CD for ML training on SageMaker, and swapped the Spark preprocessing for Polars.
 
 ## Contact
 
